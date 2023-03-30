@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/OrderDemoAPI/.vs
+/OrderDemoAPI/OrderDemo.API/bin/Debug/net7.0
+/OrderDemoAPI/OrderDemo.API/obj
+/OrderDemoAPI/OrderDemo.DataAccess/bin/Debug/net7.0
+/OrderDemoAPI/OrderDemo.DataAccess/obj
+/OrderDemoAPI/OrderDemo.Models/bin/Debug/net7.0
+/OrderDemoAPI/OrderDemo.Models/obj
+/OrderDemoUI/.vscode

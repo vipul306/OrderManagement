@@ -1,0 +1,51 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div>
+      <span class="fill-remaining-space">Order Table</span>
+    </div>
+
+    <span class="flexExpand"></span>
+    <div>
+      <span class="fill-remaining-space">
+        <button mat-raised-button (click)="addNew()">New Order</button>
+      </span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="orderList">
+    
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let row">{{ row.Id }}</td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="customerName">
+      <th mat-header-cell *matHeaderCellDef>Customer Name</th>
+      <td mat-cell *matCellDef="let row">{{ row.Customer.Name }}</td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="totalAmount">
+      <th mat-header-cell *matHeaderCellDef>Total Amount</th>
+      <td mat-cell *matCellDef="let row">{{ row.TotalAmount | currency }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      (click)="openForEdit(row.Id)"
+    ></tr>
+  </table>
+</div>

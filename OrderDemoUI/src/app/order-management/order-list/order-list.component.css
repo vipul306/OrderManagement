@@ -1,0 +1,10 @@
+.mat-row:hover .mat-cell{
+    background-color: #fff5a2;
+}
+
+tbody tr:hover {
+    background-color: #fff5a2;
+  }
+  .mat-column-totalAmount{
+    text-align: right;
+  }
